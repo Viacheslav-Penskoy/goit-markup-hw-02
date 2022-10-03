@@ -1,7 +1,10 @@
+:root {
+    --active-color: #2196F3;
+}
 /*body*/
 .body {
     font-family: 'Roboto', sans-serif;
-    background: #F5F5F5;
+    background: #FFFFFF;
 }
 
 /*Header*/
@@ -12,7 +15,7 @@
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
-    color: #2196F3;
+    color: var(--active-color);
     text-decoration: none
 }
 .logo-header-span {
@@ -25,6 +28,7 @@
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    list-style-type: none;
 }
 
 .nav-studio-link {
@@ -33,7 +37,7 @@
 }
 .nav-studio-link:hover, 
 .nav-studio-link:focus {
-    color: #2196F3;
+    color: var(--active-color);
 }
 
 .nav-portfolio-link {
@@ -42,7 +46,7 @@
 }
 .nav-portfolio-link:hover,
 .nav-portfolio-link:focus {
-    color: #2196F3;
+    color: var(--active-color);
 }
 
 .nav-contacts-link {
@@ -51,7 +55,7 @@
 }
 .nav-contacts-link:hover,
 .nav-contacts-link:focus {
-    color: #2196F3;
+    color: var(--active-color);
 }
 
 .adres-header {
@@ -59,20 +63,21 @@
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    list-style-type: none;
 }
 .adres-header-mail {
     color: #757575;
     text-decoration: none;
 }
 .adres-header-mail:hover, 
-.adres-header-mail:focus {color:#2196F3}
+.adres-header-mail:focus {color:var(--active-color)}
 
 .adres-header-tel {
     color: #757575;
     text-decoration: none;
 }
 .adres-header-tel:hover, 
-.adres-header-tel:focus {color:#2196F3}
+.adres-header-tel:focus {color:var(--active-color)}
 
 /*main index*/
     /*основная секция*/
@@ -89,15 +94,40 @@
         color: #FFFFFF;
     }
     .title-button {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.06em;
         color:#FFFFFF ;
+        background: #2196F3;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
     }
     .title-button:hover,
     .title-button:focus {
-        color: #2196F3;
+        color: var(--active-color);
     }
     /*особливості (advantage)*/
     .advantage-title {
-        color: #F5F5F5;/*cкрытый текст !!! проблема не решается*/
+        
+    }
+    .visually-hidden { 
+        position: absolute; 
+        white-space: nowrap; 
+        width: 1px; 
+        height: 1px; 
+        overflow: hidden; 
+        border: 0; 
+        padding: 0; 
+        clip: rect(0 0 0 0); 
+        clip-path: inset(100%); 
+        margin: -1px;
+}
+    .advantage-ul {
+        list-style-type: none;
     }
     .advantage-text {
         font-weight: 700;
@@ -115,6 +145,9 @@
         color: #757575;
     }
     /*Чим ми займаємося (profession)*/
+    .profession-list {
+        list-style-type: none;
+    }
     .profession-title {
         font-weight: 700;
         font-size: 36px;
@@ -124,6 +157,9 @@
         color: #212121;
     }
     /*Наша Команда (team)*/
+    .team-section {
+        background-color: #F5F4FA;
+    }
     .team-title {
         font-weight: 700;
         font-size: 36px;
@@ -131,6 +167,9 @@
         text-align: center;
         letter-spacing: 0.03em;
         color: #212121;
+    }
+    .team-ul {
+        list-style-type: none;
     }
     .team-name {
         font-weight: 500;
@@ -160,13 +199,16 @@
     font-size: 14px;
     line-height: 1.71;
 }
+.adres-footer-ul {
+    list-style-type: none;
+}
 .adres-footer-post {
     color: #FFFFFF;
     text-decoration: none;
 }
 .adres-footer-post:hover,
 .adres-footer-post:focus {
-    color: #2196F3;
+    color: var(--active-color);
 }
 .adres-footer-mail {
     color: rgba(255, 255, 255, 0.6);
@@ -174,7 +216,7 @@
 }
 .adres-footer-mail:hover,
 .adres-footer-mail:focus {
-    color:#2196F3
+    color:var(--active-color)
 }
 .adres-footer-tel {
     color: rgba(255, 255, 255, 0.6);
@@ -182,13 +224,16 @@
 }
 .adres-footer-tel:hover,
 .adres-footer-tel:focus {
-    color:#2196F3
+    color:var(--active-color)
 }
 
 /*main portfolio*/
     /*Наши работы (jobs)*/
     .jobs-title {
         color: #F5F5F5
+    } 
+    .jobs-button-ul {
+        list-style-type: none;
     }
     .jobs-button {
         font-weight: 500;
@@ -197,11 +242,20 @@
         text-align: center;
         letter-spacing: 0.03em;
         color: #212121;
+        background: #F5F4FA;
+        border-radius: 4px;
         cursor: pointer;
     }
     .jobs-button:hover,
-    .jobs-button:focus {
+    .jobs-button:focus
+    .jobs-button:active {
         color: #FFFFFF;
+        background: var(--active-color);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+    }
+    .jobs-img-ul {
+        list-style-type: none;
     }
     .jobs-name {
         font-weight: 700;
@@ -216,6 +270,4 @@
         line-height: 1.87;
         letter-spacing: 0.03em;
         color: #757575;
-
-
     }
