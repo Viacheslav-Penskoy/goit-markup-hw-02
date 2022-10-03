@@ -94,9 +94,11 @@
         color: #FFFFFF;
     }
     .title-button {
+        font-family:'Roboto';
+        font-style: normal;
         font-weight: 700;
         font-size: 16px;
-        line-height: 30px;
+        line-height: 1.87;
         display: flex;
         align-items: center;
         text-align: center;
@@ -105,15 +107,18 @@
         background: #2196F3;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
+        cursor: pointer;
     }
     .title-button:hover,
-    .title-button:focus {
-        color: var(--active-color);
+    .title-button:focus, 
+    .title-button:active {
+        color: #FFFFFF;
+        background: #188CE8;
     }
     /*особливості (advantage)*/
     .advantage-title {
-        
     }
+
     .visually-hidden { 
         position: absolute; 
         white-space: nowrap; 
@@ -170,6 +175,9 @@
     }
     .team-ul {
         list-style-type: none;
+    }
+    .team-li {
+        background-color: #FFFFFF;
     }
     .team-name {
         font-weight: 500;
@@ -236,6 +244,8 @@
         list-style-type: none;
     }
     .jobs-button {
+        font-family:'Roboto';
+        font-style: normal;
         font-weight: 500;
         font-size: 16px;
         line-height: 1.62;
@@ -247,7 +257,7 @@
         cursor: pointer;
     }
     .jobs-button:hover,
-    .jobs-button:focus
+    .jobs-button:focus,
     .jobs-button:active {
         color: #FFFFFF;
         background: var(--active-color);
